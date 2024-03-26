@@ -1,4 +1,4 @@
-package Methods.MoreExercise;
+package _04_Methods.MoreExercise;
 
 import java.util.Scanner;
 import java.util.Arrays;
