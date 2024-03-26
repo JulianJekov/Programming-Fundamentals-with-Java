@@ -2,29 +2,29 @@ package _03_Arrays.Exercise;
 
 import java.util.Scanner;
 
-public class TreasureHunt_10 {
+public class P10_TreasureHunt {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         String[] loot = scanner.nextLine().split("\\|");
         String command = scanner.nextLine();
-        while (!command.equals("Yohoho!")){
+        while (!command.equals("Yohoho!")) {
 
             String[] commandParts = command.split(" ");
             String commandName = commandParts[0];
 
-            switch (commandName){
+            switch (commandName) {
                 case "Loot":
-                    for (int i = 1; i < commandParts.length ; i++) {
+                    for (int i = 1; i < commandParts.length; i++) {
                         boolean alreadyContained = false;
                         for (int j = 0; j < loot.length; j++) {
 
-                            if(commandParts[i].equals(loot[j])){
+                            if (commandParts[i].equals(loot[j])) {
                                 alreadyContained = true;
                                 break;
                             }
                         }
-                        if(!alreadyContained){
+                        if (!alreadyContained) {
                             String newLoot = commandParts[i] + " " + String.join(" ", loot);
                             loot = newLoot.split(" ");
                         }
@@ -32,15 +32,15 @@ public class TreasureHunt_10 {
                     break;
                 case "Drop":
                     int dropIndex = Integer.parseInt(commandParts[1]);
-                    if(dropIndex<0 || dropIndex>= loot.length -1){
+                    if (dropIndex < 0 || dropIndex >= loot.length - 1) {
                         break;
-                    }else{
+                    } else {
                         String currentLoot = loot[dropIndex];
 
-                        for (int i = dropIndex; i < loot.length - 1 ; i++) {
-                            loot[i] = loot[i +1];
+                        for (int i = dropIndex; i < loot.length - 1; i++) {
+                            loot[i] = loot[i + 1];
                         }
-                        loot[loot.length-1] = currentLoot;
+                        loot[loot.length - 1] = currentLoot;
                     }
                     break;
                 case "Steal":
@@ -77,16 +77,16 @@ public class TreasureHunt_10 {
 
             command = scanner.nextLine();
         }
-        String treasureCount = String.join("",loot);
+        String treasureCount = String.join("", loot);
 
         int count = 0;
         for (int i = 0; i < treasureCount.length(); i++) {
             count++;
         }
-        double averageTreasure = 1.0 *count / loot.length;
-        if(count>0){
+        double averageTreasure = 1.0 * count / loot.length;
+        if (count > 0) {
             System.out.printf("Average treasure gain: %.2f pirate credits.", averageTreasure);
-        }else{
+        } else {
             System.out.println("Failed treasure hunt.");
         }
     }

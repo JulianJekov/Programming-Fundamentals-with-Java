@@ -2,7 +2,7 @@ package _03_Arrays.Exercise;
 
 import java.util.Scanner;
 
-public class ZigZagArrays_03 {
+public class P03_ZigZagArrays {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -15,10 +15,10 @@ public class ZigZagArrays_03 {
 
             String[] currentNum = scanner.nextLine().split(" ");
 
-            if(i % 2 == 0){
+            if (i % 2 == 0) {
                 firstArr[i] = currentNum[0];
                 secondArr[i] = currentNum[1];
-            }else{
+            } else {
                 firstArr[i] = currentNum[1];
                 secondArr[i] = currentNum[0];
             }

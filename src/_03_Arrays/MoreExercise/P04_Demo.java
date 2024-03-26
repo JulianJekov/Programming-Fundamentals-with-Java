@@ -2,7 +2,7 @@ package _03_Arrays.MoreExercise;
 
 import java.util.Scanner;
 
-public class demo2 {
+public class P04_Demo {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);

@@ -2,7 +2,7 @@ package _03_Arrays.Exercise;
 
 import java.util.Scanner;
 
-public class Train_01 {
+public class P01_Train {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -16,7 +16,7 @@ public class Train_01 {
 
             passengers[i] = Integer.parseInt(scanner.nextLine());
 
-            sum+=passengers[i];
+            sum += passengers[i];
         }
 
         for (int i = 0; i < passengers.length; i++) {

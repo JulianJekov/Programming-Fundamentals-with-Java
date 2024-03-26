@@ -4,7 +4,7 @@ package _03_Arrays.MoreExercise;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class EncryptSortAndPrintArray_01 {
+public class P01_EncryptSortAndPrintArray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

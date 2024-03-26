@@ -3,7 +3,7 @@ package _03_Arrays.Exercise;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MaxSequenceOfEqualElements_07 {
+public class P07_MaxSequenceOfEqualElements {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -18,17 +18,17 @@ public class MaxSequenceOfEqualElements_07 {
         int digit = 0;
         int count = 1;
 
-        for (int i = 1; i < numbers.length ; i++) {
+        for (int i = 1; i < numbers.length; i++) {
 
-            if(numbers[i] == numbers[i-1]){
+            if (numbers[i] == numbers[i - 1]) {
                 count++;
-                if(count>maxCount){
-                    maxCount=count;
-                    digit=numbers[i];
+                if (count > maxCount) {
+                    maxCount = count;
+                    digit = numbers[i];
                 }
 
-            }else{
-                count =1;
+            } else {
+                count = 1;
             }
 
         }

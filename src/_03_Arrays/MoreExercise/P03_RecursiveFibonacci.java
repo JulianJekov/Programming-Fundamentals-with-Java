@@ -2,7 +2,7 @@ package _03_Arrays.MoreExercise;
 
 import java.util.Scanner;
 
-public class RecursiveFibonacci_03 {
+public class P03_RecursiveFibonacci {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

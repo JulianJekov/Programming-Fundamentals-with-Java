@@ -3,7 +3,7 @@ package _03_Arrays.Exercise;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrayModifier_09 {
+public class P09_ArrayModifier {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -29,14 +29,14 @@ public class ArrayModifier_09 {
                     numbers[index2] = swappedElement;
                     break;
                 case "multiply":
-                   index1 = Integer.parseInt(commandParts[1]);
-                   index2 = Integer.parseInt(commandParts[2]);
-                   int multipliedElement = numbers[index1] * numbers[index2];
-                   numbers[index1] = multipliedElement;
+                    index1 = Integer.parseInt(commandParts[1]);
+                    index2 = Integer.parseInt(commandParts[2]);
+                    int multipliedElement = numbers[index1] * numbers[index2];
+                    numbers[index1] = multipliedElement;
                     break;
                 case "decrease":
                     for (int i = 0; i < numbers.length; i++) {
-                       int decrease = numbers[i] - 1;
+                        int decrease = numbers[i] - 1;
                         numbers[i] = decrease;
                     }
                     break;
@@ -47,9 +47,9 @@ public class ArrayModifier_09 {
 
         for (int i = 0; i < numbers.length; i++) {
 
-            if(i == numbers.length -1){
+            if (i == numbers.length - 1) {
                 System.out.print(numbers[i]);
-            }else{
+            } else {
                 System.out.print(numbers[i] + ", ");
             }
         }

@@ -2,7 +2,7 @@ package _03_Arrays.MoreExercise;
 
 import java.util.Scanner;
 
-public class PascalTriangle_02 {
+public class P02_PascalTriangle {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
