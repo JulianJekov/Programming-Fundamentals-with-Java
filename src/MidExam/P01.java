@@ -16,11 +16,11 @@ public class P01 {
             count++;
             if (i % 3 == 0 && i % 15 != 0) {
                 currentExp += earnedExp * 1.15;
-            }else if (i % 5 == 0 && i % 15 !=0) {
+            } else if (i % 5 == 0 && i % 15 != 0) {
                 currentExp += earnedExp * 0.9;
-            }else if (i % 15 == 0) {
+            } else if (i % 15 == 0) {
                 currentExp += earnedExp * 1.10;
-            }else{
+            } else {
                 currentExp += earnedExp;
             }
 
@@ -29,6 +29,6 @@ public class P01 {
                 return;
             }
         }
-            System.out.printf("Player was not able to collect the needed experience, %.2f more needed.", experience - currentExp);
+        System.out.printf("Player was not able to collect the needed experience, %.2f more needed.", experience - currentExp);
     }
 }

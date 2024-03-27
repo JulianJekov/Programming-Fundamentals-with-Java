@@ -61,12 +61,12 @@ public class P01Ranking {
         }
         System.out.printf("Best candidate is %s with total %d points.%n", bestName, bestSum);
         
-        System.out.println("Ranking:");
+        System.out.println("Ranking: ");
         userPoints.forEach((k, v) -> {
             System.out.printf("%s%n", k);
             v.entrySet().stream().
                     sorted((f, s) -> s.getValue() - f.getValue()).
-                    forEach(i -> System.out.printf("# %s -> %d%n", i.getKey(), i.getValue()));
+                    forEach(i -> System.out.printf("#  %s -> %d%n", i.getKey(), i.getValue()));
         });
 
     }
