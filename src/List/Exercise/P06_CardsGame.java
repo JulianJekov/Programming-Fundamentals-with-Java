@@ -19,7 +19,7 @@ public class P06_CardsGame {
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
 
-        while (deckOne.size() != 0 && deckTwo.size() != 0) {
+        while (!deckOne.isEmpty() && !deckTwo.isEmpty()) {
             if (deckOne.get(0) > deckTwo.get(0)) {
                 deckOne.add(deckOne.get(0));
                 deckOne.add(deckTwo.get(0));
@@ -36,16 +36,16 @@ public class P06_CardsGame {
             }
         }
 
-        if(deckOne.size() > 0){
+        if (!deckOne.isEmpty()) {
             int sum = 0;
-            for(int i : deckOne){
-                sum+= i;
+            for (int i : deckOne) {
+                sum += i;
             }
             System.out.println("First player wins! Sum: " + sum);
-        }else if(deckTwo.size() > 0){
+        } else if (!deckTwo.isEmpty()) {
             int sum = 0;
-            for(int i : deckTwo){
-                sum+=i;
+            for (int i : deckTwo) {
+                sum += i;
             }
             System.out.println("Second player wins! Sum: " + sum);
 
