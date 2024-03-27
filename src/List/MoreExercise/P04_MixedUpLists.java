@@ -3,7 +3,7 @@ package List.MoreExercise;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class P04MixedUpLists {
+public class P04_MixedUpLists {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -25,25 +25,24 @@ public class P04MixedUpLists {
         }
         Collections.sort(finalList);
 
-        if(firstList.size() > secondList.size()){
-           firstList.subList(0,minSize).clear();
+        if (firstList.size() > secondList.size()) {
+            firstList.subList(0, minSize).clear();
             Collections.sort(firstList);
             for (int i = 0; i < finalList.size(); i++) {
 
-                if(finalList.get(i) > firstList.get(0) && finalList.get(i) < firstList.get(1)){
+                if (finalList.get(i) > firstList.get(0) && finalList.get(i) < firstList.get(1)) {
                     System.out.print(finalList.get(i) + " ");
                 }
 
             }
-        }else if(secondList.size() > firstList.size()){
+        } else if (secondList.size() > firstList.size()) {
             Collections.reverse(secondList);
-            secondList.subList(0,minSize).clear();
+            secondList.subList(0, minSize).clear();
             Collections.sort(secondList);
             for (int i = 0; i < finalList.size(); i++) {
 
 
-
-                if(finalList.get(i) > secondList.get(0) && finalList.get(i) < secondList.get(1)){
+                if (finalList.get(i) > secondList.get(0) && finalList.get(i) < secondList.get(1)) {
                     System.out.print(finalList.get(i) + " ");
                 }
 
